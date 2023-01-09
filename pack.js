@@ -451,10 +451,12 @@ function pack(root) {
 }
 
 const tz_data = pack(root);
+const args = process.argv.slice(2);
+
 
 console.log(
   "%s",
-  fs.readFileSync("tz_template.js", "utf8").
+  fs.readFileSync(args[0], "utf8").
     replace(/__TZDATA__/, () => JSON.stringify(tz_data)).
     replace(/__TZLIST__/, () => JSON.stringify(tz_list))
 );

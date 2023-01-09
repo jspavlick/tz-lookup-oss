@@ -9,4 +9,7 @@ curl -L --retry 3 -C - \
 unzip timezones.geojson.zip
 unzip ne_10m_urban_areas.zip 
 ogr2ogr -f GeoJSON ne_10m_urban_areas.json ne_10m_urban_areas.shp
-node pack.js | ./node_modules/.bin/uglifyjs -mc >tz.js
+echo "Generating JS file"
+node pack.js tz_template.js | ./node_modules/.bin/uglifyjs -mc > tz.js
+echo "Generating SWIFT file"
+node pack.js tz_template.swift > tz.swift
