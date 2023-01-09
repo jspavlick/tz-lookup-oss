@@ -10,7 +10,7 @@ const EPS = 1e-6; // Epsilon value for floating-point equality checks.
 // could easily be tuned smaller or larger if appropriate.
 const URBAN_HACK_RADIUS = 720/49152;
 
-const tz_geojson = require("./dist/combined.json");
+const tz_geojson = require("./combined.json");
 const urban_geojson = require("./ne_10m_urban_areas.json");
 
 
@@ -308,6 +308,9 @@ function tile(candidates, etc_tzid, min_lat, min_lon, max_lat, max_lon, depth) {
       // Sudan-South Sudan conflict. We select Africa/Khartoum arbitrarily and
       // will tweak it if anyone complains.
       if(a === "Africa/Juba" && b === "Africa/Khartoum") { return b; }
+
+      // Georgia vs Russia conflict. We select Asia/Tbilisi 
+      if(a === "Asia/Tbilisi" && b === "Europe/Moscow") { return a; }
 
       // These are just conflicts that occur due to the resolution of our data.
       // Resolve them arbitrarily and we'll tweak it if anyone complains.

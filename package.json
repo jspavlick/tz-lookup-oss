@@ -6,7 +6,7 @@
   "description": "fast time zone lookup",
   "devDependencies": {
     "mocha": "*",
-    "uglify-js": "*"
+    "uglify-js": "^3.17.4"
   },
   "keywords": [
     "tz",
