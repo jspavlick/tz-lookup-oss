@@ -64,7 +64,7 @@ PRs with more lanugages are encouraged. To add a new language, port `tz_template
 Sources
 -------
 Timezone data is sourced from Evan Siroky's [timezone-boundary-builder][tbb].
-The database was last updated on 6 Jan 2019.
+The database was last updated on 2 Dec 2022.
 
 Regenerating
 ------------
