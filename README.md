@@ -6,7 +6,7 @@ in Node.JS, and is very fast and lightweight (~71KB) given what it does.
 
 The execution part of the library is also ported to Swift. JS is used to generate swift file with the timezone data included. PRs adding more lanugages are encouraged. 
 
-**This library is a fork of an old [DarkSky library](https://github.com/darkskyapp/tz-lookup-oss).**
+**This library is a fork of an old [DarkSky library](https://github.com/darkskyapp/tz-lookup-oss). It has been updated to reflect new timezone changes and is up to date as of January 2023**
 
 Usage
 -----
