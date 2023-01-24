@@ -12,9 +12,13 @@ Usage
 -----
 
 ### JS 
-To install:
 
-    npm install tz-lookup
+~~To install:~~
+
+~~```npm install tz-lookup```~~
+
+OUTDATED: NPM points to original dark sky library. Use `tz.js` file directly or create a new package pointing to this repo. 
+
 
 Node.JS usage:
 
