@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ex
-TZ="2022g"
+TZ="2023b"
 
 rm -rf timezones.geojson.zip combined.json ne_10m_urban_areas.*
 curl -L --retry 3 -C - \
@@ -9,7 +9,5 @@ curl -L --retry 3 -C - \
 unzip timezones.geojson.zip
 unzip ne_10m_urban_areas.zip 
 ogr2ogr -f GeoJSON ne_10m_urban_areas.json ne_10m_urban_areas.shp
-echo "Generating JS file"
-node pack.js tz_template.js | ./node_modules/.bin/uglifyjs -mc > tz.js
 echo "Generating SWIFT file"
 node pack.js tz_template.swift > tz.swift
